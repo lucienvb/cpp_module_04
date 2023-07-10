@@ -1,9 +1,9 @@
 #include <Brain.hpp>
+#include <Animal.hpp>
 
 Brain::Brain() {
 	if (MESSAGE)
 		std::cout << "Brain default constructor called" << std::endl;
-	_type = "";
 }
 
 Brain::Brain(const Brain& other) {
@@ -16,7 +16,8 @@ Brain::Brain(const Brain& other) {
 Brain&	Brain::operator=(const Brain& other) {
 	if (MESSAGE)
 		std::cout << "Brain assignment operator called" << std::endl;
-	this->_type = other._type;
+	for (size_t i = 0; i < NUMBER_OF_IDEAS; i++)
+		this->ideas[i] = other.ideas[i];
 	return (*this);
 }
 

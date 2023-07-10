@@ -9,14 +9,14 @@ public:
 	Dog();
 	Dog(const Dog& other);
 
-	Dog&	operator=(const Dog& other);
-
-	void	makeSound(void) const;
+	virtual Dog&	operator=(const Dog& other);
+	virtual void	makeSound(void) const;
+	virtual Brain*	getBrain(void) const;
 
 	~Dog();
 
 private:
-	Brain	*brain;
+	Brain	*_brain;
 };
 
 #endif

@@ -1,33 +1,32 @@
-#include <Animal.hpp>
-#include <WrongAnimal.hpp>
-#include <WrongCat.hpp>
 #include <Cat.hpp>
 #include <Dog.hpp>
+#include <Brain.hpp>
 
 int main()
 {
-//	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-//	const Animal* i = new Cat();
-//	std::cout << j->getType() << " " << std::endl;
-//	std::cout << i->getType() << " " << std::endl;
-//	i->makeSound(); //will output the cat sound!
-//	j->makeSound();
-//	meta->makeSound();
-	Brain	*brain;
-	j->brain = brain;
-	WrongAnimal	Jan;
-	WrongCat	Han;
-	Jan.makeSound();
-	Han.makeSound();
+	Animal	*animals[6];
+	Brain*	brain = NULL;
+
+	for (size_t i = 0; i < 6; i++) {
+		if (i < 3)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
+
+	brain = animals[0]->getBrain();
+	brain->ideas[0] = "han company";
+	brain->ideas[1] = "firmaatje";
+
+	std::cout << animals[0]->getBrain()->ideas[0] << std::endl;
+	std::cout << animals[0]->getBrain()->ideas[1] << std::endl;
+
+	*(animals[2]) = *(animals[0]);
+
+	std::cout << "Aa: " << animals[2]->getBrain()->ideas[0] << std::endl;
+
+	for (int i = 0; i < 6; i++)
+		delete animals[i];
+
 	return 0;
 }
-
-//int	main(void) {
-//	Cat	goat;
-//	Cat	geit(goat);
-//	Dog	pferd;
-//	goat.makeSound();
-//	pferd.makeSound();
-//	return(0);
-//}

@@ -3,7 +3,8 @@
 Dog::Dog() {
 	if (MESSAGE)
 		std::cout << "Dog default constructor called" << std::endl;
-	_type = "Dog";
+	this->_type = "Dog";
+	this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog& other) {
@@ -16,7 +17,8 @@ Dog::Dog(const Dog& other) {
 Dog&	Dog::operator=(const Dog& other) {
 	if (MESSAGE)
 		std::cout << "Dog assignment operator called" << std::endl;
-	this->_type = other._type;
+	this->_type = other.getType();
+	*(this->_brain) = *(other.getBrain());
 	return (*this);
 }
 
@@ -27,4 +29,8 @@ Dog::~Dog() {
 
 void	Dog::makeSound(void) const {
 	std::cout << "woof woof" << std::endl;
+}
+
+Brain*	Dog::getBrain(void) const {
+	return (_brain);
 }

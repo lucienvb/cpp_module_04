@@ -6,19 +6,20 @@
 #include <Brain.hpp>
 
 // DEFINES
-#define MESSAGE 1
+#define MESSAGE 0
 
 class Animal {
 public:
 	Animal();
 	Animal(const Animal& other);
 
-	Animal&	operator=(const Animal& other);
+	virtual Animal&	operator=(const Animal& other);
 
-	std::string getType(void) const;
-	virtual void	makeSound(void) const;
+	virtual std::string getType(void) const;
+	virtual void		makeSound(void) const;
+	virtual Brain*		getBrain(void) const = 0;
 
-	~Animal();
+	virtual ~Animal();
 
 protected:
 	std::string	_type;
