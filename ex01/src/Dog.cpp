@@ -18,13 +18,14 @@ Dog&	Dog::operator=(const Dog& other) {
 	if (MESSAGE)
 		std::cout << "Dog assignment operator called" << std::endl;
 	this->_type = other.getType();
-	*(this->_brain) = *(other.getBrain());
+	this->_brain = other.getBrain();
 	return (*this);
 }
 
 Dog::~Dog() {
 	if (MESSAGE)
 		std::cout << "Dog destructor called" << std::endl;
+	delete this->_brain;
 }
 
 void	Dog::makeSound(void) const {
