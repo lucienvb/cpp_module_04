@@ -3,7 +3,6 @@
 Animal::Animal() {
 	if (MESSAGE)
 		std::cout << "Animal default constructor called" << std::endl;
-	_type = "";
 }
 
 Animal::Animal(const Animal& other) {

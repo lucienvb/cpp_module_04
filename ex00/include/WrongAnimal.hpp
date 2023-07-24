@@ -3,7 +3,6 @@
 
 // INCLUDES
 #include <iostream>
-//#include <WrongCat.hpp>
 
 // DEFINES
 #define MESSAGE 1
