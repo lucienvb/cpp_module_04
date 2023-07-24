@@ -9,9 +9,9 @@ public:
 	Dog();
 	Dog(const Dog& other);
 
-	virtual Dog&	operator=(const Dog& other);
-	virtual void	makeSound(void) const;
-	virtual Brain*	getBrain(void) const;
+	Dog&	operator=(const Dog& other);
+	void	makeSound(void) const;
+	Brain*	getBrain(void) const;
 
 	~Dog();
 

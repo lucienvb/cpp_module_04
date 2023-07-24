@@ -17,7 +17,7 @@ Brain&	Brain::operator=(const Brain& other) {
 	if (MESSAGE)
 		std::cout << "Brain assignment operator called" << std::endl;
 	for (size_t i = 0; i < NUMBER_OF_IDEAS; i++)
-		this->ideas[i] = other.ideas[i];
+		this->_ideas[i] = other._ideas[i];
 	return (*this);
 }
 

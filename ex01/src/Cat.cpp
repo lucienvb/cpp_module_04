@@ -10,22 +10,26 @@ Cat::Cat() {
 Cat::Cat(const Cat& other) {
 	if (MESSAGE)
 		std::cout << "Cat copy constructor called" << std::endl;
-	if (this != &other)
-		*this = other;
+	this->_type = other.getType();
+	this->_brain = new Brain(*(other._brain));
 }
 
 Cat&	Cat::operator=(const Cat& other) {
 	if (MESSAGE)
 		std::cout << "Cat assignment operator called" << std::endl;
-	this->_type = other.getType();
-	this->_brain = other.getBrain();
+	if (this != &other) {
+		this->_type = other.getType();
+		delete this->_brain;
+		this->_brain = new Brain(*(other._brain));
+	}
 	return (*this);
 }
 
 Cat::~Cat() {
 	if (MESSAGE)
 		std::cout << "Cat destructor called" << std::endl;
-	delete this->_brain;
+	if (this->_brain != nullptr)
+		delete this->_brain;
 }
 
 void	Cat::makeSound(void) const {

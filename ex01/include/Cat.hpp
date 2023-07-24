@@ -9,9 +9,9 @@ public:
 	Cat();
 	Cat(const Cat& other);
 
-	virtual Cat&	operator=(const Cat& other);
-	virtual	void	makeSound(void) const;
-	virtual Brain*	getBrain(void) const;
+	Cat&	operator=(const Cat& other);
+	void	makeSound(void) const;
+	Brain*	getBrain(void) const;
 
 	~Cat();
 

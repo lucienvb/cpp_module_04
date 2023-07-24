@@ -6,14 +6,14 @@
 #include <Brain.hpp>
 
 // DEFINES
-#define MESSAGE 0
+#define MESSAGE 1
 
 class Animal {
 public:
 	Animal();
 	Animal(const Animal& other);
 
-	virtual Animal&	operator=(const Animal& other);
+	Animal&	operator=(const Animal& other);
 
 	virtual std::string getType(void) const;
 	virtual void		makeSound(void) const;
