@@ -6,25 +6,21 @@
 #include <Brain.hpp>
 
 // DEFINES
-#define MESSAGE 0
+#define MESSAGE 1
 
-// the default Animal class should not be instantiable
-// what does that mean?
 class Animal {
 public:
-//	Animal();
-//	Animal(const Animal& other);
-
-	virtual Animal&	operator=(const Animal& other);
-
-	virtual std::string getType(void) const;
-	virtual void		makeSound(void) const;
+	std::string getType(void) const;
+	virtual void		makeSound(void) const = 0;
 	virtual Brain*		getBrain(void) const = 0;
 
 	virtual ~Animal();
 
 protected:
-	std::string	_type;
+    Animal();
+    Animal(const Animal& other);
+    Animal&	operator=(const Animal& other);
+    std::string	_type;
 };
 
 #endif

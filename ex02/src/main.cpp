@@ -21,9 +21,10 @@ int main()
 		brain = animals[0]->getBrain();
 		brain->_ideas[0] = "han company";
 		brain->_ideas[1] = "firmaatje";
+        (*animals[0]).makeSound();
 
-		std::cout << "animal 0: " << animals[0]->getBrain()->_ideas[0] << std::endl;
-		std::cout << "animal 0: " << animals[0]->getBrain()->_ideas[1] << std::endl;
+		std::cout << "\nanimal 0: " << animals[0]->getBrain()->_ideas[0] << std::endl;
+		std::cout << "animal 0: " << animals[0]->getBrain()->_ideas[1] << "\n" << std::endl;
 
 		for (size_t i = 0; i < 6; i++)
 			delete animals[i];

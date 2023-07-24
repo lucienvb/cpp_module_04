@@ -1,17 +1,16 @@
 #include <Animal.hpp>
 
-//Animal::Animal() {
-//	if (MESSAGE)
-//		std::cout << "Animal default constructor called" << std::endl;
-//	_type = "";
-//}
-//
-//Animal::Animal(const Animal& other) {
-//	if (MESSAGE)
-//		std::cout << "Animal copy constructor called" << std::endl;
-//	if (this != &other)
-//		*this = other;
-//}
+Animal::Animal() {
+	if (MESSAGE)
+		std::cout << "Animal default constructor called" << std::endl;
+}
+
+Animal::Animal(const Animal& other) {
+	if (MESSAGE)
+		std::cout << "Animal copy constructor called" << std::endl;
+	if (this != &other)
+		*this = other;
+}
 
 Animal&	Animal::operator=(const Animal& other) {
 	if (MESSAGE)
@@ -27,8 +26,4 @@ Animal::~Animal() {
 
 std::string	Animal::getType(void) const {
 	return (this->_type);
-}
-
-void	Animal::makeSound(void) const {
-	std::cout << "A combination of all animal sounds combined?!" << std::endl;
 }
