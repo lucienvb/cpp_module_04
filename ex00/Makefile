@@ -116,6 +116,7 @@ resan: fclean fsan
 .PHONY: resan
 
 fclean: clean
+	@$(RM) $(NAME)
 
 re: fclean all
 
