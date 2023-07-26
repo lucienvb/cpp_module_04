@@ -4,20 +4,21 @@
 
 int main()
 {
-	{
-		Animal	test;
-	}
 //	{
-//		Animal *animals[6];
-//		for (size_t i = 0; i < 6; i++) {
-//			if (i < 3)
-//				animals[i] = new Dog();
-//			else
-//				animals[i] = new Cat();
-//		}
-//		for (size_t i = 0; i < 6; i++)
-//			delete animals[i];
+//		Animal	test;
 //	}
+	{
+		Animal *animals[6];
+		for (size_t i = 0; i < 6; i++) {
+			if (i < 3)
+				animals[i] = new Dog();
+			else
+				animals[i] = new Cat();
+		}
+		std::cout << "\n";
+		for (size_t i = 0; i < 6; i++)
+			delete animals[i];
+	}
 //	std::cout << "\n";
 //	{
 //		Dog dog;
