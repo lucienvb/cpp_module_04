@@ -33,6 +33,8 @@ ifdef	DEBUG
 	CFLAGS		+=-g
 endif
 
+# undefined: this enables UndefinedBehaviorSanitizer (UBSan),
+# which checks for undefined behavior in your code.
 ifdef	FSAN
 	CFLAGS		+=-fsanitize=address,undefined
 endif
