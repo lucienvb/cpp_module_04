@@ -8,7 +8,6 @@
 // DEFINES
 #define MESSAGE 1
 
-// I have to get rid of the getBrain pure function!
 // I should be able to explain what happens with and without the destructor on virtual!
 class Animal {
 public:
@@ -19,7 +18,6 @@ public:
 
 	virtual std::string getType(void) const;
 	virtual void		makeSound(void) const;
-//	virtual Brain*		getBrain(void) const = 0;
 
 	virtual ~Animal();
 

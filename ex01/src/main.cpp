@@ -4,33 +4,43 @@
 
 int main()
 {
+	{
+		Animal	test;
+	}
 //	{
 //		Animal *animals[6];
-//		Brain *brain = NULL;
 //		for (size_t i = 0; i < 6; i++) {
 //			if (i < 3)
 //				animals[i] = new Dog();
 //			else
 //				animals[i] = new Cat();
 //		}
-//
-//		brain = animals[0]->getBrain();
-//		brain->_ideas[0] = "han company";
-//		brain->_ideas[1] = "firmaatje";
-//
-//		std::cout << "animal 0: " << animals[0]->getBrain()->_ideas[0] << std::endl;
-//		std::cout << "animal 0: " << animals[0]->getBrain()->_ideas[1] << std::endl;
-//
 //		for (size_t i = 0; i < 6; i++)
 //			delete animals[i];
 //	}
 //	std::cout << "\n";
-	{
-		Dog basic;
-		{
-			Dog tmp = basic;
-		}
-	}
+//	{
+//		Dog dog;
+//		{
+//			Dog tmp = dog;
+//		}
+//	}
+//	{
+//		Dog dog;
+//		Brain *brain = NULL;
+//		brain = dog.getBrain();
+//		brain->ideas[0] = "han company";
+//		brain->ideas[1] = "firmaatje";
+//
+//		std::cout << "dog idea 0: " << dog.getBrain()->ideas[0] << std::endl;
+//		std::cout << "dog idea 1: " << dog.getBrain()->ideas[1] << std::endl;
+//	}
+//	{
+//		const Animal* j = new Dog();
+//		const Animal* i = new Cat();
+//		delete j;//should not create a leak
+//		delete i;
+//	}
 //	system("leaks brain");
 	return 0;
 }
