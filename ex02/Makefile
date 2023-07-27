@@ -12,6 +12,8 @@
 
 include makerc/colors.mk
 
+# !! headers are not build when using just make -- fix this before using this Makefile again !!
+
 ################################################################################
 
 NAME			:= abstract
